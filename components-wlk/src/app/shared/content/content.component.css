@@ -1,0 +1,10 @@
+.main{
+  background-color: #f0f0f0 ;
+  text-align: center;
+  height: 55em;
+}
+
+.content-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
