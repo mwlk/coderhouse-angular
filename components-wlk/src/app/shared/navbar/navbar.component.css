@@ -4,14 +4,14 @@
   width: 25vh;
 }
 
+#options{
+  position: fixed;
+  z-index: 1;
+}
+
 .nav-link {
   font-size: large;
   color: aliceblue;
-}
-
-.nav-link.disabled {
-  font-size: large;
-  color: darkgrey;
 }
 
 /* From cssbuttons.io by @namecho */
