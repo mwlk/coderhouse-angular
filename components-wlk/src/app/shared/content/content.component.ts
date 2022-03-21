@@ -12,7 +12,9 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.list = recipes;
+  }
 
-    console.log(this.list)
+  navigate(url: string){
+    window.location.href = url;
   }
 }
