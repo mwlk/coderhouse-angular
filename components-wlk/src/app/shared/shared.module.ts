@@ -7,16 +7,27 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
-  declarations: [ToolbarComponent, NavbarComponent, ContentComponent],
+  declarations: [
+    ToolbarComponent,
+    NavbarComponent,
+    ContentComponent,
+    LinksComponent,
+  ],
   imports: [
     CommonModule,
     MatCardModule,
     MatButtonModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
   ],
-  exports: [ToolbarComponent, NavbarComponent, ContentComponent],
+  exports: [
+    ToolbarComponent,
+    NavbarComponent,
+    ContentComponent,
+    LinksComponent,
+  ],
 })
 export class SharedModule {}

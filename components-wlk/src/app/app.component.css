@@ -10,11 +10,16 @@
   grid-area: main;
 }
 
+.grid-links{
+  grid-area: links;
+}
+
 
 .grid-container{
   display: grid;
   grid-template-areas:
   'header header  header  header  header  header'
   'menu   main    main    main    main    main'
+  'menu   links   links   links   links   links'
   ;
 }
