@@ -1,9 +1,8 @@
 <div class="container">
   <div class="col-md-8 offset-2">
-    <h1>Form</h1>
     <form
       [formGroup]="formExample"
-      (ngSubmit)="SubmitForm(formExample.value)"
+      (ngSubmit)="SubmitForm()"
       class="form"
     >
       <div class="col-sm">
@@ -12,6 +11,14 @@
           <input type="text" formControlName="name"
           class="form-control"
           placeholder="Insert a Name">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label for="">Surname</label>
+          <input type="text" formControlName="surname"
+          class="form-control"
+          placeholder="Insert your Surname">
         </div>
       </div>
       <div class="col-sm">
@@ -40,10 +47,31 @@
       </mat-form-field>
         </div>
       </div>
-      <div class="col-sm"></div>
-      <div class="col-sm"></div>
-      <div class="col-sm"></div>
-      <div class="row " >
+      <div class="col-sm">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="text" formControlName="mail"
+          class="form-control"
+          >
+        </div>
+      </div>
+      <div class="col-sm">
+        <label
+        >Birthdate</label
+      >
+
+        <input
+          type="date"
+          id="hf-referencia"
+          name="hf-referencia"
+          class="form-control"
+          formControlName="date"
+
+        />
+
+      </div>
+
+      <div class="row mt-4" >
         <button
         [disabled]="!formExample.valid"
         type="submit"
