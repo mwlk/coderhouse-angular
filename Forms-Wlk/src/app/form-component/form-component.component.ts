@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-component',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponentComponent implements OnInit {
 
-  constructor() { }
+  public formExample: FormGroup
+  constructor() {
+    this.formExample = this.CreateFormGroup();
+  }
+
+  CreateFormGroup(){
+    return new FormGroup({})
+  }
+
+  SubmitForm(value: any){
+    alert("sumbit")
+  }
 
   ngOnInit(): void {
   }
