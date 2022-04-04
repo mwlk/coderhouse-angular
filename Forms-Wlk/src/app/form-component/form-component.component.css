@@ -1,7 +1,11 @@
 .not-empty-select.mat-selected {
-  color: green !important;
+  color: navy !important;
 }
 
 :host /deep/ .mat-select-value-text {
-  color: green !important;
+  color: navy !important;
+}
+
+/deep/ .mat-select{
+  background-color: grey;
 }
