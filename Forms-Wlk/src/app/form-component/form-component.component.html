@@ -53,9 +53,12 @@
           <input type="text" formControlName="mail"
           class="form-control"
           >
+          <span *ngIf="mail?.invalid" class="text-danger">Email not Valid</span>
         </div>
+
       </div>
       <div class="col-sm">
+        <div class="form-group">
         <label
         >Birthdate</label
       >
@@ -68,7 +71,8 @@
           formControlName="date"
 
         />
-
+        <span *ngIf="date?.invalid" class="text-danger">Select a Day please!</span>
+      </div>
       </div>
 
       <div class="row mt-4" >

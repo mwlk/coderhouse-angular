@@ -45,12 +45,20 @@ export class FormComponentComponent implements OnInit {
     });
   }
 
+  get mail() {
+    return this.formExample.get('mail');
+  }
+
+  get date() {
+    return this.formExample.get('date');
+  }
+
   SubmitForm() {
     if (!this.formExample.valid) {
       this.showSwal('Check', 'Review Data', 'wanning');
     } else {
       this.showSwal('Good Job', 'Data is OK', 'success');
-      setTimeout( () => {
+      setTimeout(() => {
         this.formExample.reset();
       }, 2000);
     }
