@@ -5,6 +5,11 @@ import { DefaultLayoutComponent } from './container/default-layout/default-layou
 const routes: Routes = [
   {
     path: "",
+    redirectTo: "inicio",
+    pathMatch: "full"
+  },
+  {
+    path: "",
     component: DefaultLayoutComponent,
     children: [
       {
