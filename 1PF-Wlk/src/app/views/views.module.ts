@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ViewsRoutingModule } from './views-routing.module';
 import { HomeComponent } from './home/home.component';
-import { AuxMaterialModulesModule } from '../aux-material-modules/aux-material-modules.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AuxMaterialModulesModule } from '../aux-material-modules/aux-material-m
   imports: [
     CommonModule,
     ViewsRoutingModule,
-    AuxMaterialModulesModule
+    // SharedModule
   ]
 })
 export class ViewsModule { }
