@@ -1,23 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { AuxMaterialModulesModule } from '../aux-material-modules/aux-material-modules.module';
-
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { ContentComponent } from './content/content.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
     ToolbarComponent,
-    SidenavComponent
+    NavbarComponent,
+    ContentComponent,
+    LinksComponent,
   ],
   imports: [
     CommonModule,
-    AuxMaterialModulesModule
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
   ],
   exports: [
     ToolbarComponent,
-    SidenavComponent
-  ]
+    NavbarComponent,
+    ContentComponent,
+    LinksComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
