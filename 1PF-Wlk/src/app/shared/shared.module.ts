@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { LinksComponent } from './links/links.component';
+import { MatTableModule } from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { LinksComponent } from './links/links.component';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatTableModule,
+    MatFormFieldModule
   ],
   exports: [
     ToolbarComponent,
