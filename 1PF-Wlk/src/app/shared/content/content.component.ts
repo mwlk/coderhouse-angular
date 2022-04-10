@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/models/student';
+import { StudentService } from 'src/app/services/student.service';
 import { recipes } from '../../../recipes';
 
 export interface PeriodicElement {
@@ -30,11 +32,12 @@ export class ContentComponent implements OnInit {
   // list: any = [];
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource: Student[] = [];
 
-  constructor() {}
+  constructor(private _studentSvc: StudentService) {}
 
   ngOnInit(): void {
-
+    this.dataSource = this._studentSvc.GetAllStudents();
+    console.log(this.dataSource);
   }
 }
