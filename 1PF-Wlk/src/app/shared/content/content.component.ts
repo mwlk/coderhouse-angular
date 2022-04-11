@@ -31,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ContentComponent implements OnInit {
   // list: any = [];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['ID','Name', 'Gender', 'Class', 'Club', 'Persona', 'Hairstyle', 'Color', 'action'];
   dataSource: Student[] = [];
 
   constructor(private _studentSvc: StudentService) {}
