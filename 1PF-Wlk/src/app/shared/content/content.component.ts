@@ -40,4 +40,8 @@ export class ContentComponent implements OnInit {
     this.dataSource = this._studentSvc.GetAllStudents();
     console.log(this.dataSource);
   }
+
+  delete(id: number){
+    console.log(id)
+  }
 }
