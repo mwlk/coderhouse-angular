@@ -10,7 +10,7 @@ import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 import { CustomDirectiveDirective } from './directives/custom-directive.directive';
 
 @NgModule({
-  declarations: [AppComponent, CustomPipePipe, CustomDirectiveDirective],
+  declarations: [AppComponent, CustomDirectiveDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

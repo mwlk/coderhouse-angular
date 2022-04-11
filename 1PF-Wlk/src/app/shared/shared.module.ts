@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LinksComponent } from './links/links.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { CustomPipePipe } from '../pipes/custom-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NavbarComponent,
     ContentComponent,
     LinksComponent,
+    CustomPipePipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +27,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDividerModule,
     MatIconModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   exports: [
     ToolbarComponent,

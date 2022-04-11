@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomPipePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(name: unknown, args?: any): string {
+    let complete_name: string = `${args}, ${name}`
+    return complete_name;
   }
 
 }
