@@ -7,24 +7,26 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { LinksComponent } from './links/links.component';
+
 import { MatTableModule } from '@angular/material/table';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { CustomPipePipe } from '../pipes/custom-pipe.pipe';
 import { CustomDirectiveDirective } from '../directives/custom-directive.directive';
 import { ClubPipe } from '../pipes/club.pipe';
 import { CalificacionesDirective } from '../directives/calificaciones.directive';
+import { CreateFormComponent } from './create-form/create-form.component';
 
 @NgModule({
   declarations: [
     ToolbarComponent,
     NavbarComponent,
     ContentComponent,
-    LinksComponent,
+
     CustomPipePipe,
     CustomDirectiveDirective,
     ClubPipe,
-    CalificacionesDirective
+    CalificacionesDirective,
+    CreateFormComponent,
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { CalificacionesDirective } from '../directives/calificaciones.directive'
     ToolbarComponent,
     NavbarComponent,
     ContentComponent,
-    LinksComponent,
+
+    CreateFormComponent,
   ],
 })
 export class SharedModule {}
