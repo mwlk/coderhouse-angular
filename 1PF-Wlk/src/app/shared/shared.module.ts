@@ -11,6 +11,8 @@ import { LinksComponent } from './links/links.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomPipePipe } from '../pipes/custom-pipe.pipe';
+import { CustomDirectiveDirective } from '../directives/custom-directive.directive';
+import { ClubPipe } from '../pipes/club.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CustomPipePipe } from '../pipes/custom-pipe.pipe';
     NavbarComponent,
     ContentComponent,
     LinksComponent,
-    CustomPipePipe
+    CustomPipePipe,
+    CustomDirectiveDirective,
+    ClubPipe
   ],
   imports: [
     CommonModule,
