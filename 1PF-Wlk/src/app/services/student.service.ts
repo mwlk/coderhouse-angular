@@ -20,4 +20,10 @@ export class StudentService {
   DeleteStudent(id: number): Student[]{
     return this.studentsList.splice(id, 1)
   }
+
+  AddStudent(student: Student): Student[]{
+     this.studentsList.push(student);
+
+     return this.studentsList;
+  }
 }

@@ -15,6 +15,7 @@ import { CustomDirectiveDirective } from '../directives/custom-directive.directi
 import { ClubPipe } from '../pipes/club.pipe';
 import { CalificacionesDirective } from '../directives/calificaciones.directive';
 import { CreateFormComponent } from './create-form/create-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { CreateFormComponent } from './create-form/create-form.component';
     CreateFormComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     MatCardModule,
     MatButtonModule,
