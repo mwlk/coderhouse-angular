@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomPipePipe } from '../pipes/custom-pipe.pipe';
 import { CustomDirectiveDirective } from '../directives/custom-directive.directive';
 import { ClubPipe } from '../pipes/club.pipe';
+import { CalificacionesDirective } from '../directives/calificaciones.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ClubPipe } from '../pipes/club.pipe';
     LinksComponent,
     CustomPipePipe,
     CustomDirectiveDirective,
-    ClubPipe
+    ClubPipe,
+    CalificacionesDirective
   ],
   imports: [
     CommonModule,
