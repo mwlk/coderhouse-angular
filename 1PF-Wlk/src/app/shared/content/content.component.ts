@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { Student } from 'src/app/models/student';
 import { StudentService } from 'src/app/services/student.service';
 import { recipes } from '../../../recipes';
@@ -29,6 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
+  @ViewChild('TableStudents') TableStudents!: MatTable<any>
   // list: any = [];
 
   displayedColumns: string[] = ['ID','Name', 'Gender', 'Class', 'Club', 'Persona', 'Hairstyle', 'Color', 'action'];
@@ -42,6 +44,8 @@ export class ContentComponent implements OnInit {
   }
 
   delete(id: number){
-    console.log(id)
+    this._studentSvc.DeleteStudent(id)
+
+    this.TableStudents.renderRows()
   }
 }

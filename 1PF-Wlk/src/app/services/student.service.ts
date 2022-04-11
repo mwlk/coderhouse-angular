@@ -16,4 +16,8 @@ export class StudentService {
 
     return this.studentsList;
   }
+
+  DeleteStudent(id: number): Student[]{
+    return this.studentsList.splice(id, 1)
+  }
 }
