@@ -4,31 +4,30 @@ import { students } from 'src/students';
 import { Student } from '../models/student';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StudentService {
-
   public studentsList: Student[] = [];
 
-  constructor() { }
+  constructor() {}
 
-
-  GetAllStudents(): Student[]{
-    this.studentsList = students
+  GetAllStudents(): Student[] {
+    this.studentsList = students;
 
     return this.studentsList;
   }
 
-  DeleteStudent(id: number): Student[]{
-    return this.studentsList.splice(id, 1)
+  DeleteStudent(id: number): Student[] {
+    return this.studentsList.splice(id, 1);
   }
 
-  AddStudent(student: Student): Student[]{
-     this.studentsList.push(student);
+  AddStudent(student: Student): Student[] {
+    student.ID = (this.studentsList.length + 1).toString();
 
-    console.log(this.studentsList)
+    this.studentsList.push(student);
 
+    console.log(this.studentsList);
 
-     return this.studentsList;
+    return this.studentsList;
   }
 }
