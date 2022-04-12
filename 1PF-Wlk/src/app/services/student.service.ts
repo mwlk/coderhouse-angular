@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subscriber } from 'rxjs';
 import { students } from 'src/students';
 import { Student } from '../models/student';
 
@@ -7,7 +8,8 @@ import { Student } from '../models/student';
 })
 export class StudentService {
 
-  public studentsList: Student[] = []
+  public studentsList: Student[] = [];
+
   constructor() { }
 
 
@@ -23,6 +25,9 @@ export class StudentService {
 
   AddStudent(student: Student): Student[]{
      this.studentsList.push(student);
+
+    console.log(this.studentsList)
+
 
      return this.studentsList;
   }

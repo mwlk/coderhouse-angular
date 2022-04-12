@@ -1,67 +1,69 @@
-<div class="container">
-   <h1 class="animate__animated animate__fadeInDownBig ml10">
+<div class="container pt--4 pb-4">
+  <h1 class="animate__animated animate__fadeInDownBig ml10">
     <span class="text-wrapper">
-      <span class="">Agregar Alumnos</span>
+      <span id="newStudent">Agregar Alumnos</span>
     </span>
   </h1>
+
   <div class="col-md-8 offset-2">
-    <form [formGroup]="createForm" (ngSubmit)="SubmitForm()" class="form">
-      <div class="col-sm">
-        <div class="form-group">
-          <label for="">Nombre</label>
-          <input
-            type="text"
-            formControlName="name"
-            class="form-control"
-            placeholder="Ingrese un Nombre por favor"
-          />
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="form-group">
-          <label for="">Apellido</label>
-          <input
-            type="text"
-            formControlName="surname"
-            class="form-control"
-            placeholder="Ingrese Apellido del Alumno"
-          />
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-group">
-          <label for="">Calficación Final</label>
-          <input
-            type="numbre"
-            formControlName="class"
-            class="form-control"
-            placeholder="Ingrese Nota Final del Alumno"
-          />
-        </div>
-      </div>
-
-
-      <div class="col-md-4 offset-4">
-        <div class="row mt-4 ">
-          <div class="col-md-12">
-            <button
-              [disabled]="!createForm.valid"
-              type="submit"
-              class="btn btn-primary ml-2 mr-2"
-            >
-              <span>Confirm</span>
-            </button>
-            <button
-              type="button"
-              (click)="Reset()"
-              class="btn btn-danger ml-2 mr-2"
-            >
-              <span>Reset Form</span>
-            </button>
+    <mat-card>
+      <form [formGroup]="createForm" (ngSubmit)="SubmitForm()" class="form">
+        <div class="col-sm">
+          <div class="form-group">
+            <label [appCustomDirective]>Nombre</label>
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              placeholder="Ingrese un Nombre por favor"
+            />
           </div>
         </div>
-      </div>
-    </form>
+        <div class="col-sm">
+          <div class="form-group">
+            <label [appCustomDirective]>Apellido</label>
+            <input
+              type="text"
+              formControlName="surname"
+              class="form-control"
+              placeholder="Ingrese Apellido del Alumno"
+            />
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="form-group">
+            <label [appCustomDirective]>Calficación Final</label>
+            <input
+              type="number"
+              formControlName="class"
+              class="form-control"
+              placeholder="Ingrese Nota Final del Alumno"
+            />
+          </div>
+        </div>
+
+        <div class="col-md-4 offset-4">
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <button
+                [disabled]="!createForm.valid"
+                type="submit"
+                class="btn btn-primary ml-2 mr-2"
+              >
+                <span>Confirm</span>
+              </button>
+              <button
+                type="button"
+                (click)="Reset()"
+                class="btn btn-danger ml-2 mr-2"
+              >
+                <span>Reset Form</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </mat-card>
   </div>
 </div>

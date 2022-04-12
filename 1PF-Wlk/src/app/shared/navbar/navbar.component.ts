@@ -12,11 +12,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toLinks(){
-    document.getElementById('links')?.scrollIntoView()
+  toNewStudent(){
+    document.getElementById('newStudent')?.scrollIntoView()
   }
 
-  toRecipes(){
+  toList(){
     document.getElementById('content')?.scrollIntoView()
   }
 }
