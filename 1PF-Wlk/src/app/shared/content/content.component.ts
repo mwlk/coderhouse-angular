@@ -50,6 +50,8 @@ export class ContentComponent implements OnInit, OnChanges {
           this._studentSvc.DeleteStudent(id);
 
           this.TableStudents.renderRows();
+
+          Swal.fire('Operación con Éxito', 'El Alumno Fue Dado de Baja', 'success')
         }
       }
     );

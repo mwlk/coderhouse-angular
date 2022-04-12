@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Student } from 'src/app/models/student';
 import { StudentService } from 'src/app/services/student.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-form',
@@ -44,6 +45,13 @@ export class CreateFormComponent implements OnInit {
 
   }
   Reset() {
-    this.createForm.reset();
+    Swal.fire('Resetear Formulario', 'Confirmar Operación', 'question').then((conf) => {
+      if(conf.isConfirmed){
+        this.createForm.reset();
+
+        Swal.fire('Formulario Reseteado con Éxito', '','success')
+      }
+    })
+
   }
 }
