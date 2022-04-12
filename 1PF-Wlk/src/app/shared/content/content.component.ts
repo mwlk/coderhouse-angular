@@ -8,6 +8,7 @@ import {
 import { MatTable } from '@angular/material/table';
 import { Student } from 'src/app/models/student';
 import { StudentService } from 'src/app/services/student.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-content',
@@ -43,8 +44,14 @@ export class ContentComponent implements OnInit, OnChanges {
   }
 
   delete(id: number) {
-    this._studentSvc.DeleteStudent(id);
+    Swal.fire('Dar de Baja al estudiante', 'Confirmar Operación', 'question').then(
+      (conf) => {
+        if (conf.isConfirmed) {
+          this._studentSvc.DeleteStudent(id);
 
-    this.TableStudents.renderRows();
+          this.TableStudents.renderRows();
+        }
+      }
+    );
   }
 }
