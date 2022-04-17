@@ -43,7 +43,22 @@ export class DataService {
 
   GetFilter() {
     return this.students$.pipe(
-      map((curso:Student[]) => curso.filter(person => person.Class > 60))
+      map((curso: Student[]) => curso.filter((person) => person.Class > 60))
     );
+  }
+
+  AddStudent(student: any) {
+    // console.log(`param = ${JSON.stringify(student)}`)
+
+    var newStudent: Student = {
+      ID: (this.studentList.length + 1).toString(),
+      Name: (student.surname + ' ' + student.name).toLocaleUpperCase(),
+      Class: student.class,
+    };
+
+    this.studentList.push(newStudent);
+
+    console.log(this.studentList);
+    return this.students$;
   }
 }
