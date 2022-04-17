@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { MaterialHelperModule } from './material-helper/material-helper.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    NavbarComponent
+    NavbarComponent,
+    DialogComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialHelperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
