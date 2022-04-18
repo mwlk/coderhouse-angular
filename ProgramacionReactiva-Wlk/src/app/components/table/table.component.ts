@@ -3,6 +3,7 @@ import { DataService } from 'src/app/services/data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { Student } from 'src/app/models/student';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-table',
@@ -10,26 +11,44 @@ import { Student } from 'src/app/models/student';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit, OnDestroy {
-  public students: Student[] = []
+  public students: Student[] = [];
   public studentsPrm: Student[] = [];
-  public promiseStudent!: Promise<Student[]>
+  public promiseStudent!: Promise<Student[]>;
+
+  public studentSuscripcion!: Subscription;
+  public students$!: Observable<Student[]>
 
   constructor(public dialog: MatDialog, private _dataSvc: DataService) {}
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    this.studentSuscripcion.unsubscribe();
   }
 
   ngOnInit(): void {
-    this._dataSvc.GetFilter().subscribe((res) => {
+    // this._dataSvc.GetObservable().subscribe((res) => {
+    //   console.log(`observable ${res}`);
+    //   this.students = res;
+    // });
+
+    this.ObservableFunction();
+
+    this.PromiseFunction();
+  }
+
+  ObservableFunction() {
+    // this.students$ = this._dataSvc.GetFilter()
+
+    this.studentSuscripcion = this._dataSvc.GetFilter().subscribe({
       // console.log(`filter ${JSON.stringify(res)}`);
-      this.students = res
+      next: (res) => {
+        this.students = res;
+      },
+      error: (error) => {
+        console.log(`an error:  ${error}`);
+      },
     });
+  }
 
-    this._dataSvc.GetObservable().subscribe((res) => {
-      // console.log(`observable ${res}`);
-      // this.students = res;
-    });
-
+  PromiseFunction() {
     this.promiseStudent = this._dataSvc.GetPromise();
 
     this.promiseStudent
@@ -46,6 +65,6 @@ export class TableComponent implements OnInit, OnDestroy {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '500px',
       autoFocus: true,
-    })
+    });
   }
 }

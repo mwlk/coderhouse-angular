@@ -41,7 +41,7 @@ export class DataService {
     return this.students$;
   }
 
-  GetFilter() {
+  GetFilter(): Observable<Student[]> {
     return this.students$.pipe(
       map((curso: Student[]) => curso.filter((person) => person.Class > 60))
     );
