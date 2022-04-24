@@ -18,7 +18,7 @@ export class TableComponent implements OnInit, OnDestroy {
   public studentSuscripcion!: Subscription;
   public students$!: Observable<Student[]>
 
-  constructor(public dialog: MatDialog, private _dataSvc: DataService) {}
+  constructor(private _dataSvc: DataService) {}
   ngOnDestroy(): void {
     this.studentSuscripcion.unsubscribe();
   }
@@ -61,10 +61,5 @@ export class TableComponent implements OnInit, OnDestroy {
       });
   }
 
-  openModal() {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '500px',
-      autoFocus: true,
-    });
-  }
+
 }

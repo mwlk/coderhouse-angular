@@ -5,7 +5,7 @@ import { CoreComponent } from './core-module/core/core.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'listado',
     pathMatch: 'full',
   },
   {
