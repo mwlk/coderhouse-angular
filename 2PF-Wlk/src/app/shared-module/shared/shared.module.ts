@@ -7,6 +7,10 @@ import { MaterialHelperModule } from '../material-helper.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { ClubPipe } from '../pipes/club.pipe';
+import { CompleteNamePipe } from '../pipes/complete-name.pipe';
+import { CalificacionesDirective } from '../directives/calificaciones.directive';
+import { CustomDirectiveDirective } from '../directives/custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -14,6 +18,10 @@ import { RouterModule } from '@angular/router';
     DialogComponent,
     NavbarComponent,
     SidebarComponent,
+    ClubPipe,
+    CompleteNamePipe,
+    CalificacionesDirective,
+    CustomDirectiveDirective
   ],
   imports: [
     CommonModule,
@@ -22,6 +30,7 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     MaterialHelperModule,
   ],
-  exports: [TableComponent, DialogComponent, NavbarComponent, SidebarComponent],
+  exports: [TableComponent, DialogComponent, NavbarComponent, SidebarComponent,
+  ClubPipe, CompleteNamePipe, CalificacionesDirective, CustomDirectiveDirective],
 })
 export class SharedModule {}

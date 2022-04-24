@@ -4,6 +4,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [],
@@ -15,7 +16,8 @@ import { MatListModule } from '@angular/material/list';
     MatDialogModule,
     MatButtonModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ]
 })
 export class MaterialHelperModule { }

@@ -61,4 +61,8 @@ export class DataService {
     console.log(this.studentList);
     return this.students$;
   }
+
+  DeleteStudent(id: number): Student[] {
+    return this.studentList.splice(id, 1);
+  }
 }
