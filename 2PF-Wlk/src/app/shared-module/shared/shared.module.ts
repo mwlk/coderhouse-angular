@@ -6,6 +6,7 @@ import { TableComponent } from '../components/table/table.component';
 import { MaterialHelperModule } from '../material-helper.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
     MaterialHelperModule,
   ],
   exports: [TableComponent, DialogComponent, NavbarComponent, SidebarComponent],

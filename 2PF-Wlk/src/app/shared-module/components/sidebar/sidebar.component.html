@@ -3,11 +3,11 @@
     <h1 class="text-white">Menu</h1>
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link active" (click)="toList()">
+        <a class="nav-link active" [routerLink]="['/listado']" routerLinkActive="router-link-active" >
           <button>Listado</button></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="toNewStudent()"><button>
+        <a class="nav-link" [routerLink]="['/agregar']" routerLinkActive="router-link-active"><button>
           Agregar Alumno
         </button></a>
       </li>
