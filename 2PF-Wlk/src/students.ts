@@ -4,6 +4,7 @@ import { Student } from "./app/models/student";
     {
       "ID": "1",
       "Name": "Senpai",
+      "Surname": "Gomes",
       "Gender": "1",
       "Class": 90,
       "Club": "0",
@@ -21,7 +22,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "2",
-      "Name": "Yui Rio",
+      "Name": "Yui ",
+      "Surname": "Rio",
       "Gender": "0",
       "Class": 11,
       "Club": "0",
@@ -39,7 +41,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "3",
-      "Name": "Yuna Hina",
+      "Name": "Yuna",
+      "Surname": "Hina",
       "Gender": "0",
       "Class": 12,
       "Club": "0",
@@ -57,7 +60,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "4",
-      "Name": "Koharu Hinata",
+      "Name": "Koharu",
+      "Surname": "Hinata",
       "Gender": "0",
       "Class": 21,
       "Club": "0",
@@ -75,7 +79,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "5",
-      "Name": "Mei Mio",
+      "Name": "Mei ",
+      "Surname": "Mio",
       "Gender": "0",
       "Class": 66,
       "Club": "0",
@@ -93,7 +98,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "6",
-      "Name": "Saki Miyu",
+      "Name": "Saki",
+      "Surname": "Miyu",
       "Gender": "0",
       "Class": 88,
       "Club": "0",
@@ -111,7 +117,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "7",
-      "Name": "Kokona Haruka",
+      "Name": "Kokona ",
+      "Surname": "Haruka",
       "Gender": "0",
       "Class": 70,
       "Club": "0",
@@ -129,7 +136,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "8",
-      "Name": "Haruto Yuto",
+      "Name": "Haruto",
+      "Surname": "Yuto",
       "Gender": "1",
       "Class": 24,
       "Club": "0",
@@ -147,7 +155,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "9",
-      "Name": "Sota Yuki",
+      "Name": "Sota",
+      "Surname":"Yuki",
       "Gender": "1",
       "Class": 60,
       "Club": "0",
@@ -165,7 +174,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "10",
-      "Name": "Hayato Haruki",
+      "Name": "Hayato",
+      "Surname": "Haruki",
       "Gender": "1",
       "Class": 55,
       "Club": "0",
@@ -183,7 +193,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "11",
-      "Name": "Ryusei Koki",
+      "Name": "Ryusei",
+      "Surname":"Koki",
       "Gender": "1",
       "Class": 39,
       "Club": "0",
@@ -201,7 +212,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "12",
-      "Name": "Sora Sosuke",
+      "Name": "Sora",
+      "Surname":"Sosuke",
       "Gender": "1",
       "Class": 88,
       "Club": "0",
@@ -219,7 +231,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "13",
-      "Name": "Riku Soma",
+      "Name": "Riku",
+      "Surname":"Soma",
       "Gender": "1",
       "Class": 44,
       "Club": "0",
@@ -237,7 +250,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "14",
-      "Name": "Pippi Osu",
+      "Name": "Pippi",
+      "Surname":"Osu",
       "Gender": "0",
       "Class": 62,
       "Club": "11",
@@ -255,7 +269,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "15",
-      "Name": "Ryuto Ippongo",
+      "Name": "Ryuto",
+      "Surname":"Ippongo",
       "Gender": "1",
       "Class": 51,
       "Club": "11",
@@ -273,7 +288,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "16",
-      "Name": "Midori Gurin",
+      "Name": "Midori",
+      "Surname":"Gurin",
       "Gender": "0",
       "Class": 11,
       "Club": "11",
@@ -291,7 +307,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "17",
-      "Name": "Sakyu Basu",
+      "Name": "Sakyu",
+      "Surname": "Basu",
       "Gender": "0",
       "Class": 32,
       "Club": "0",
@@ -309,7 +326,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "18",
-      "Name": "Inkyu Basu",
+      "Name": "Inkyu",
+      "Surname": "Basu",
       "Gender": "0",
       "Class": 72,
       "Club": "0",
@@ -327,7 +345,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "19",
-      "Name": "Kuu Dere",
+      "Name": "Kuu",
+      "Surname": "Dere",
       "Gender": "0",
       "Class": 44,
       "Club": "0",
@@ -345,7 +364,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "20",
-      "Name": "Mai Waifu",
+      "Name": "Mai",
+      "Surname": "Waifi",
       "Gender": "0",
       "Class": 68,
       "Club": "11",
@@ -363,7 +383,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "21",
-      "Name": "Budo Masuta",
+      "Name": "Budo",
+      "Surname":"Masuta",
       "Gender": "1",
       "Class": 91,
       "Club": "6",
@@ -381,7 +402,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "22",
-      "Name": "Sho Kunin",
+      "Name": "Sho",
+      "Surname":"Kunin",
       "Gender": "1",
       "Class": 22,
       "Club": "6",
@@ -399,7 +421,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "23",
-      "Name": "Juku Ren",
+      "Name": "Juku",
+      "Surname": "Ren",
       "Gender": "1",
       "Class": 12,
       "Club": "6",
@@ -417,7 +440,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "24",
-      "Name": "Mina Rai",
+      "Name": "Mina",
+      "Surname": "Rai",
       "Gender": "0",
       "Class": 77,
       "Club": "6",
@@ -435,7 +459,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "25",
-      "Name": "Shima Shita",
+      "Name": "Shima",
+      "Surname": "Shita",
       "Gender": "0",
       "Class": 68,
       "Club": "6",
@@ -453,7 +478,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "26",
-      "Name": "Oka Ruto",
+      "Name": "Oka",
+      "Surname": "Ruto",
       "Gender": "0",
       "Class": 32,
       "Club": "3",
@@ -471,7 +497,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "27",
-      "Name": "Shin Higaku",
+      "Name": "Shin",
+      "Surname": "Higaku",
       "Gender": "1",
       "Class": 24,
       "Club": "3",
@@ -489,7 +516,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "28",
-      "Name": "Supana Churu",
+      "Name": "Supana",
+      "Surname": "Churu",
       "Gender": "0",
       "Class": 65,
       "Club": "3",
@@ -507,7 +535,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "29",
-      "Name": "Chojo Tekina",
+      "Name": "Chojo",
+      "Surname": "Tekina",
       "Gender": "1",
       "Class": 40,
       "Club": "3",
@@ -525,7 +554,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "30",
-      "Name": "Kokuma Jutsu",
+      "Name": "Kokuma",
+      "Surname": "Jutsu",
       "Gender": "0",
       "Class": 44,
       "Club": "3",
@@ -543,7 +573,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "31",
-      "Name": "Daku Atsu",
+      "Name": "Daku",
+      "Surname": "Atsu",
       "Gender": "1",
       "Class": 32,
       "Club": "3",
@@ -561,7 +592,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "32",
-      "Name": "Musume Ronshaku",
+      "Name": "Musume",
+      "Surname": "Ronshaku",
       "Gender": "0",
       "Class": 23,
       "Club": "0",
@@ -580,6 +612,7 @@ import { Student } from "./app/models/student";
     {
       "ID": "33",
       "Name": "",
+      "Surname": "NN",
       "Gender": "0",
       "Class": 88,
       "Club": "0",
@@ -598,6 +631,7 @@ import { Student } from "./app/models/student";
     {
       "ID": "34",
       "Name": "",
+      "Surname": "NN",
       "Gender": "0",
       "Class": 0,
       "Club": "0",
@@ -615,7 +649,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "35",
-      "Name": "Reina Nana",
+      "Name": "Reina",
+      "Surname": "Nana",
       "Gender": "0",
       "Class": 11,
       "Club": "100",
@@ -633,7 +668,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "36",
-      "Name": "Natsuki Anna",
+      "Name": "Natsuki",
+      "Surname": "Anna",
       "Gender": "0",
       "Class": 77,
       "Club": "100",
@@ -651,7 +687,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "37",
-      "Name": "Rino Fuka",
+      "Name": "Rino",
+      "Surname": "Fuka",
       "Gender": "0",
       "Class": 8,
       "Club": "100",
@@ -669,7 +706,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "38",
-      "Name": "Shiori Risa",
+      "Name": "Shiori",
+      "Surname": "Risa",
       "Gender": "0",
       "Class": 55,
       "Club": "100",
@@ -687,7 +725,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "39",
-      "Name": "Karin Hana",
+      "Name": "Karin",
+      "Surname": "Hana",
       "Gender": "0",
       "Class": 77,
       "Club": "100",
@@ -705,7 +744,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "40",
-      "Name": "Kaho Kanon",
+      "Name": "Kaho",
+      "Surname": "Kanon",
       "Gender": "0",
       "Class": 40,
       "Club": "100",
@@ -723,7 +763,8 @@ import { Student } from "./app/models/student";
     },
     {
       "ID": "41",
-      "Name": "Kyoshi Taiso",
+      "Name": "Kyoshi",
+      "Surname": "Taiso",
       "Gender": "0",
       "Class": 0,
       "Club": "101",

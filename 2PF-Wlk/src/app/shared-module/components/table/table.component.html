@@ -10,7 +10,7 @@
         <mat-list>
           <div mat-subheader>Estudiantes Observable</div>
           <mat-list-item *ngFor="let student of students">
-            <div mat-line>{{ student.Name }}</div>
+            <div mat-line>{{ student.Name | completeName: student.Surname}}</div>
             <div mat-line>{{ student.Class }}</div>
             <mat-divider></mat-divider>
           </mat-list-item>
@@ -20,8 +20,8 @@
         <mat-list>
           <div mat-subheader>Estudiantes Promise</div>
           <mat-list-item *ngFor="let student of promiseStudent | async">
-            <div mat-line>{{ student.Name }}</div>
-            <div mat-line>{{ student.Class }}</div>
+            <div mat-line>{{ student.Name | completeName: student.Surname | uppercase}}</div>
+            <div mat-line [appCalificaciones]="student.Class">{{ student.Class }}</div>
             <mat-divider></mat-divider>
           </mat-list-item>
         </mat-list>

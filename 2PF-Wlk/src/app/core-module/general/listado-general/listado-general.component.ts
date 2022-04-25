@@ -26,8 +26,6 @@ export class ListadoGeneralComponent implements OnInit, OnChanges {
     'Gender',
     'Class',
     'Club',
-    'Persona',
-    'Hairstyle',
     'Color',
     'action',
   ];
