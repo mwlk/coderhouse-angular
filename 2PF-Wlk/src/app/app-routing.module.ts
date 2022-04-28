@@ -5,20 +5,34 @@ import { CoreComponent } from './core-module/core/core.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'listado',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: '',
+    path: 'admin',
     component: CoreComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import('src/app/core-module/core/core.module').then(m =>
-          m.CoreModule)
-      }
-    ]
-  }
+        loadChildren: () =>
+          import('src/app/core-module/core/core.module').then(
+            (m) => m.CoreModule
+          ),
+      },
+    ],
+  },
+  {
+    path: '',
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('src/app/auth-module/auth/auth.module').then(
+            (m) => m.AuthModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
