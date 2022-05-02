@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
           text: 'Login con Éxito', 
           icon: 'success',
           confirmButtonText: 'Aceptar',
-          confirmButtonColor: '#FF5F00',
+          confirmButtonColor: '#330033',
          }).then(conf =>{
            if(conf.isConfirmed){
              localStorage.setItem('user', JSON.stringify(returned))
