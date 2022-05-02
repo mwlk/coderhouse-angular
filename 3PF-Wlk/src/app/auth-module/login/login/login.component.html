@@ -1,0 +1,76 @@
+<div class="fondo app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <form
+                  [formGroup]="formLogin"
+                  (submit)="login()"
+                  
+                >
+                  <h1>Bienvenido</h1>
+                  <p class="text-muted">Coderhouse</p>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <mat-icon
+                          aria-hidden="false"
+                          aria-label="Example home icon"
+                          >badge</mat-icon
+                        >
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ingrese Nombre de Usuario"
+                      autocomplete="username"
+                      required
+                      formControlName="username"
+                      required
+                    />
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <mat-icon
+                          aria-hidden="false"
+                          aria-label="Example home icon"
+                          >key</mat-icon
+                        >
+                      </span>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="********"
+                      autocomplete="current-password"
+                      required
+                      formControlName="password"
+                    />
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <button
+                        [disabled]="!formLogin.valid"
+                        mat-raised-button
+                        type="submit"
+                        color="primary"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
