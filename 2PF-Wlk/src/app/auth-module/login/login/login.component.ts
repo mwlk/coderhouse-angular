@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       (res: any) => {
         let userList: User[] = res
 
-        let returned;
+        let returned: string | User | undefined;
        
         userList.forEach(element => {
           if(element.username == this.formLogin.get('username')?.value && element.password === this.formLogin.get('password')?.value){
@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
           confirmButtonColor: '#FF5F00',
          }).then(conf =>{
            if(conf.isConfirmed){
+             localStorage.setItem('user', JSON.stringify(returned))
              this._router.navigateByUrl('admin')
            }
          })
