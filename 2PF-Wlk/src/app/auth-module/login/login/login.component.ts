@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { element } from 'protractor';
 import { User } from 'src/app/models/user';
 import { MockapiService } from 'src/app/services/mock/mockapi.service';
 import Swal from 'sweetalert2';
@@ -54,6 +53,14 @@ export class LoginComponent implements OnInit {
              this._router.navigateByUrl('admin')
            }
          })
+        }else {
+          Swal.fire({
+            title: 'Error',
+            text: 'Revise Los Datos Ingresados', 
+            icon: 'error',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#330033',
+          })
         }
       },
       (error) => {
