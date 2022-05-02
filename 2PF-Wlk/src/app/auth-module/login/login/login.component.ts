@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
        
         userList.forEach(element => {
           if(element.username == this.formLogin.get('username')?.value && element.password === this.formLogin.get('password')?.value){
-            returned = element;
+            returned = element.name;
           }
         })
 
