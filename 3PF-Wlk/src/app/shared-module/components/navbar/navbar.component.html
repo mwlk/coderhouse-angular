@@ -1,14 +1,21 @@
 <div class="header pt-4 pb-2">
   <div class="row">
-    <div class="col-md-11">
+    <div class="col-md-10">
       <h1 class="animate__animated animate__backInDown">
-        2° Entrega Coderhouse
+        3° Entrega Coderhouse
       </h1>
     </div>
-    <div class="col-md-1 align-content-end">
-      <button mat-mini-fab color="primary" (click)="logout()" aria-label="Example icon button with a delete icon">
-        <mat-icon>logout</mat-icon>
-      </button>
+    <div class="col-md-2 align-content-end">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>{{userLog.name}}</h5>
+          <button mat-mini-fab color="primary" (click)="logout()" aria-label="Example icon button with a delete icon">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </div>
+        
+      </div>
+      
     </div>
   </div>
 </div>

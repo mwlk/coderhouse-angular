@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
           }
         })
 
-        console.log(returned);
+        // console.log(returned);
 
         if(returned !== undefined){
          Swal.fire({
