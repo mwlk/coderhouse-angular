@@ -6,7 +6,7 @@ import { ListadoGeneralComponent } from '../general/listado-general/listado-gene
 
 const routes: Routes = [
   {
-    path: 'listado',
+    path: '',
     component: TableComponent,
   },
   {
