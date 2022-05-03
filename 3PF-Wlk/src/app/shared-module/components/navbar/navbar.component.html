@@ -2,21 +2,28 @@
   <div class="row">
     <div class="col-md-10">
       <h1 class="animate__animated animate__backInDown">
-        3° Entrega Coderhouse
+        2° Entrega Coderhouse
       </h1>
     </div>
     <div class="col-md-2 align-content-end">
       <div class="row">
         <div class="col-md-12">
-          <h5>{{ userLog.name }}</h5>
-          <button
-            mat-mini-fab
-            color="primary"
-            (click)="logout()"
-            aria-label="Example icon button with a delete icon"
-          >
-            <mat-icon>logout</mat-icon>
-          </button>
+          <div class="row" style="vertical-align: middle;">
+            <div class="col-md-8 text-center" style="vertical-align: middle;"> 
+              <h3><b>Bienvenido</b></h3>
+              <h4>{{ userLog }}</h4>
+            </div>
+            <div class="col-md-4 text-center" style="vertical-align: middle;"> 
+              <button
+                mat-mini-fab
+                color="primary"
+                (click)="logout()"
+                aria-label="Example icon button with a delete icon"
+              >
+                <mat-icon>logout</mat-icon>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
