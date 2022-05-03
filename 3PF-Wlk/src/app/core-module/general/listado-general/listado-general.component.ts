@@ -21,12 +21,12 @@ export class ListadoGeneralComponent implements OnInit, OnChanges {
   // list: any = [];
 
   displayedColumns: string[] = [
-    'ID',
+    // 'ID',
     'Name',
-    'Gender',
+    // 'Gender',
     'Class',
     'Club',
-    'Color',
+    // 'Color',
     'action',
   ];
   dataSource: Student[] = [];
