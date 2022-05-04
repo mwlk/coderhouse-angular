@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
-
-  constructor(private _router: Router,private _mockapiSvc: MockapiService) {
+  userList: User[] = [];
+  constructor(private _router: Router, private _mockapiSvc: MockapiService) {
     this.formLogin = this.prepareForm();
   }
 
@@ -26,46 +26,46 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   login() {
-    this._mockapiSvc.GetAllUsers().subscribe(
-      (res: any) => {
-        let userList: User[] = res
-
-        let returned: string | User | undefined;
-       
-        userList.forEach(element => {
-          if(element.username == this.formLogin.get('username')?.value && element.password === this.formLogin.get('password')?.value){
-            returned = element.name;
+    this._mockapiSvc
+      .login(
+        this.formLogin.get('username')?.value,
+        this.formLogin.get('password')?.value
+      )
+      .subscribe(
+        (res: any) => {
+          let returned = res;
+          if (returned !== undefined && returned !== null) {
+            Swal.fire({
+              title: 'Bienvenido',
+              text: 'Login con Éxito',
+              icon: 'success',
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: '#330033',
+            }).then((confirm) => {
+              if (confirm.isConfirmed) {
+                localStorage.setItem('user', JSON.stringify(returned));
+                this._router.navigateByUrl('admin');
+              }
+            });
+          } else {
+            Swal.fire({
+              title: 'Error',
+              text: 'Revise Los Datos Ingresados',
+              icon: 'error',
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: '#330033',
+            });
           }
-        })
-
-        console.log(returned);
-
-        if(returned !== undefined){
-         Swal.fire({
-          title: 'Bienvenido',
-          text: 'Login con Éxito', 
-          icon: 'success',
-          confirmButtonText: 'Aceptar',
-          confirmButtonColor: '#330033',
-         }).then(conf =>{
-           if(conf.isConfirmed){
-             localStorage.setItem('user', JSON.stringify(returned))
-             this._router.navigateByUrl('admin')
-           }
-         })
-        }else {
+        },
+        (err) => {
           Swal.fire({
             title: 'Error',
-            text: 'Revise Los Datos Ingresados', 
+            text: 'Un Error con API',
             icon: 'error',
             confirmButtonText: 'Aceptar',
             confirmButtonColor: '#330033',
-          })
+          });
         }
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+      );
   }
 }

@@ -21,7 +21,31 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('lista usuarios declarada e inicializada', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const controller = fixture.componentInstance;
+
+    fixture.detectChanges();
+    expect(controller.userList.length).toEqual(0);
+  });
+
+  //! validar list
+  it('lista de usuarios cargada exitosamente', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const controller = fixture.componentInstance;
+
+    fixture.detectChanges();
+
+    expect(controller.userList).toBeTruthy();
+  });
+
+  it('prepare form', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const controller = fixture.componentInstance;
+
+    fixture.detectChanges();
+
+    expect(controller.formLogin.get('username')).toBeTruthy();
+    expect(controller.formLogin.get('password')).toBeTruthy();
   });
 });

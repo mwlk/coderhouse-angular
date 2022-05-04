@@ -8,6 +8,7 @@ describe('MockapiService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
+      providers: [MockapiService],
     });
     service = TestBed.inject(MockapiService);
   });
