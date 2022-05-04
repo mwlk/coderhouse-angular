@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   userList: User[] = [];
+  userLog?: User = undefined;
   constructor(private _router: Router, private _mockapiSvc: MockapiService) {
     this.formLogin = this.prepareForm();
   }
@@ -33,20 +34,24 @@ export class LoginComponent implements OnInit {
       )
       .subscribe(
         (res: any) => {
-          let returned = res;
-          if (returned !== undefined && returned !== null) {
-            Swal.fire({
-              title: 'Bienvenido',
-              text: 'Login con Éxito',
-              icon: 'success',
-              confirmButtonText: 'Aceptar',
-              confirmButtonColor: '#330033',
-            }).then((confirm) => {
-              if (confirm.isConfirmed) {
-                localStorage.setItem('user', JSON.stringify(returned));
-                this._router.navigateByUrl('admin');
-              }
-            });
+          if (res.length > 0) {
+            this.userLog = res[0];
+            console.log(this.userLog);
+
+            if (this.userLog != undefined) {
+              Swal.fire({
+                title: 'Bienvenido',
+                text: 'Login con Éxito',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#330033',
+              }).then((confirm) => {
+                if (confirm.isConfirmed) {
+                  localStorage.setItem('user', JSON.stringify(this.userLog?.name));
+                  this._router.navigateByUrl('admin');
+                }
+              });
+            }
           } else {
             Swal.fire({
               title: 'Error',
