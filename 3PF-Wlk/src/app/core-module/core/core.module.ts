@@ -6,10 +6,11 @@ import { CoreComponent } from './core.component';
 import { SharedModule } from 'src/app/shared-module/shared/shared.module';
 import { ListadoGeneralComponent } from '../general/listado-general/listado-general.component';
 import { MaterialHelperModule } from 'src/app/shared-module/material-helper.module';
+import { AddStudentComponent } from '../add-student/add-student.component';
 
 
 @NgModule({
-  declarations: [CoreComponent, ListadoGeneralComponent],
+  declarations: [CoreComponent, ListadoGeneralComponent, AddStudentComponent, ListadoGeneralComponent],
   imports: [
     CommonModule,
     CoreRoutingModule,
